@@ -1,0 +1,275 @@
+.publicScore{
+  padding: 0 20px;
+  color: #666666;
+  font-size: 14px;
+}
+.publicScore .textLeft{
+  text-align: left;
+}
+.publicScore .cellName {
+  display: inline-block;
+  margin-left: 10px;
+}
+.publicScore .tabBtn {
+  border-bottom: 1px solid #ECEDEF;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.publicScore .yearTime{
+  text-align: left;
+  margin: 20px 0;
+}
+.publicScore .school-year-icon {
+  display: inline-block;
+  width: 3px;
+  height: 14px;
+  background: #0e9deb;
+  vertical-align: middle;
+}
+.publicScore .school-year-text {
+  display: inline-block;
+  margin-left: 8px;
+  /*font-size: 14px;*/
+  color: #0d9ee9;
+  /*font-family: "\5B8B\4F53";*/
+  vertical-align: middle;
+}
+.publicScore .selectWrap{
+  margin-bottom: 10px;
+  padding-left: 8px;
+  overflow: hidden;
+}
+.publicScore .selectWrap h4{
+  /*display: inline-block;*/
+  float: left;
+  margin-right: 10px;
+  line-height: 30px;
+}
+.publicScore .el-input__inner {
+  width: 290px;
+  height: 30px;
+  border-radius: 0;
+}
+.publicScore .gradeWrap {
+  padding-left: 8px;
+}
+.publicScore .gradeWrap ul {
+  display: inline-block;
+  margin-left: 5px;
+}
+.publicScore .gradeWrap li {
+  box-sizing: border-box;
+  color: #545454;
+  margin: 0 5px;
+  display: inline-block;
+  /*width: 60px;*/
+  height: 30px;
+  padding: 0 10px;
+  line-height: 28.5px;
+  border: 1px solid #d7d7d7;
+  /*border-radius: 5px;*/
+  text-align: center;
+  cursor: pointer;
+}
+.publicScore .gradeWrap li:hover {
+  /*background: 0b81bf;*/
+  color: #0b81bf;
+  border: 1px solid #0b81bf;
+}
+.publicScore .gradeWrap li.active {
+  color: #0b81bf;
+  border: 1px solid #0b81bf;
+}
+.publicScore .tableWrap {
+  text-align: center;
+  margin-top: 20px;
+  padding: 0 8px;
+}
+.publicScore .tableWrap th {
+  font-weight: 600;
+}
+.publicScore .tableWrap .cell {
+  text-align: center;
+}
+.publicScore .el-button--primary {
+    color: #fff;
+    background-color: #0d9ee9;;
+    border-color: #0d9ee9;;
+}
+
+/*按钮样式*/
+.publicScore .textBtn {
+  display: inline-block;
+  margin-right: 10px;
+}
+.publicScore .textBtn span{
+  font-size: 14px;
+  color: #20a0ff;
+  text-decoration: underline;
+}
+.publicScore .textBtn span.del{
+  color: #ff5353;
+  text-decoration: underline;
+}
+.publicScore .svgStyle {
+  margin-right: 5px;
+}
+.publicScore .textBtn span:hover{
+  color: #20a0ff;
+}
+.publicScore .textBtn span:active{
+  color: #0b88c8;
+}
+.publicScore .textBtn span.del:hover{
+  color: #ff5353;
+}
+.publicScore .textBtn span.del:active{
+  color: #db4747;
+}
+
+
+
+/*查看成绩样式*/
+.publicScore .callBackBtn {
+  border-bottom: 1px solid #ECEDEF;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  position: relative;
+}
+.publicScore .el-button--text {
+  font-size: 16px;
+  color: #666666;
+}
+.publicScore .editBtn {
+  /*margin: 20px 0;*/
+  position: absolute;
+  right: 0;
+  top: 10px;
+  display: inline-block;
+  text-align: right;
+}
+.publicScore .hideBtn {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+.publicScore .hideStatus {
+  display: none;
+}
+.publicScore .examMsg {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #0b81bf;
+
+}
+.publicScore .examMsg p {
+  display: inline-block;
+}
+.publicScore .classMsg {
+  margin-left: 50px;
+}
+.publicScore .countWrap {
+  text-align: right;
+}
+.publicScore .headcount {
+  display: inline-block;
+  text-align: center;
+  width: 90px;
+}
+.publicScore .scoreTable .table {
+  width: 100%;
+  border: 1px solid #dfe6ec;
+  margin-top: 10px;
+}
+.publicScore .scoreTable .table tr,td {
+  border-bottom: 1px solid #dfe6ec;
+  border-right: 1px solid #dfe6ec;
+}
+.publicScore .scoreTable .table tr:nth-child(1) th{
+  font-weight: 600;
+}
+.publicScore .scoreTable .table th { box-sizing:border-box; text-align: center; background-color: #effaff; color: #007dc4; border:none; border-left: 1px solid #a5defa; border-top: 1px solid #a5defa;padding: 2px 1px}
+.publicScore .scoreTable .table td {
+  box-sizing: border-box;
+  height: 30px;
+}
+.publicScore .scoreTable .table td:nth-child(1) {
+  width: 53px;
+}
+.publicScore .scoreTable .table td:nth-child(2) {
+  width: 150px;
+}
+/*.publicScore .scoreTable .table td:nth-child(2) input {  */
+  /*cursor: pointer;*/
+/*}*/
+.publicScore .scoreTable .table input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  text-align: center;
+}
+.publicScore .scoreTable .table input:disabled{
+  border-left:1px solid #DDD;
+  border-bottom:1px solid #DDD;
+  background-color:#F5F5F5;
+}
+/*.errorInput {*/
+/*outline: 1px solid red;*/
+/*}*/
+.publicScore .scoreTable .allowEdit {
+  box-sizing: border-box;
+  /*border: none;*/
+  outline: none;
+  border: 1px solid gray;
+}
+.publicScore .scoreTable .notAllowEdit{
+  border: none;
+  outline: none;
+}
+.publicScore .scoreTable .tdName {
+  width: 20%;
+}
+.publicScore .scoreTable .tdNumber {
+  width: 30%;
+}
+.publicScore .gradeWrapMsg > div{
+  margin-top: 10px;
+  display: inline-block;
+}
+.publicScore .gradeWrapMsg > div > p {
+  display: inline-block;
+  /*margin-left: 20px;*/
+}
+
+
+/*固定表头样式设置*/
+.publicScore .scrollTable .tbodyScroll  {
+  box-sizing: border-box;
+  display:block;
+  height:500px;
+  /*overflow-y:scroll;*/
+  overflow: scroll;
+  overflow-x:hidden
+}
+.publicScore .scrollTable .theadFixed {
+  display:table;
+  width: calc( 100% - 18px );
+  table-layout:fixed;
+}
+.publicScore .scrollTable .trFixed {
+  display:table;
+  width:100%;
+  table-layout:fixed;
+}
+.publicScore .scrollTable .theadFixed tr:nth-child(1) th:nth-child(1) {
+  width: 5.55%;
+}
+.publicScore .scrollTable .theadFixed tr:nth-child(1) th:nth-child(2) {
+  width: 15.55%;
+}
+/*谷歌浏览器滚动条宽度*/
+.publicScore ::-webkit-scrollbar/*整体部分*/
+{
+  width: 19px;
+}

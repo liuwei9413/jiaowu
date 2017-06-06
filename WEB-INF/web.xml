@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+	xsi:schemaLocation="
+	http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>yitai-educational</display-name>
+	
+	
+	<filter>
+	    <filter-name>CorsFilter</filter-name>
+	    <filter-class>yitai.common.cors.CorsFilter</filter-class>
+	    <init-param>
+	        <param-name>cors.allowed.origins</param-name>
+	        <param-value>*</param-value>
+	    </init-param>
+	    <init-param>
+	        <param-name>cors.allowed.methods</param-name>
+	        <param-value>GET,POST,HEAD,OPTIONS,PUT</param-value>
+	    </init-param>
+	    <init-param>
+	        <param-name>cors.allowed.headers</param-name>
+	        <param-value>Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Last-Modified</param-value>
+	    </init-param>
+	    <init-param>
+	        <param-name>cors.exposed.headers</param-name>
+	        <param-value>Access-Control-Allow-Origin,Access-Control-Allow-Credentials</param-value>
+	    </init-param>
+	    <init-param>
+	        <param-name>cors.support.credentials</param-name>
+	        <param-value>true</param-value>
+	    </init-param>
+	</filter> 
+	
+	<filter-mapping>
+	    <filter-name>CorsFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:/META-INF/spring/root.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>spring.profiles.default</param-name>
+		<param-value>production</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!--Shiro过滤器-->
+    <filter>
+        <filter-name>shiroFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+        <init-param>
+            <param-name>targetFilterLifecycle</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>shiroFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!--     用于单点退出，该过滤器用于实现单点登出功能，可选配置。 --> 
+    <listener>
+        <listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>
+    </listener>
+    <filter>
+        <filter-name>CAS Single Sign Out Filter</filter-name>
+        <filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CAS Single Sign Out Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    	
+    <filter>
+		<filter-name>openEntityManagerInViewFilter</filter-name>
+		<filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>openEntityManagerInViewFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+<!-- 	<filter> -->
+<!-- 		<filter-name>shiroFilter</filter-name> -->
+<!-- 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class> -->
+<!-- 		<init-param> -->
+<!-- 			<param-name>targetFilterLifecycle</param-name> -->
+<!-- 			<param-value>true</param-value> -->
+<!-- 		</init-param> -->
+<!-- 	</filter> -->
+<!-- 	<filter-mapping> -->
+<!-- 		<filter-name>shiroFilter</filter-name> -->
+<!-- 		<url-pattern>/*</url-pattern> -->
+<!-- 	</filter-mapping> -->
+
+	<!-- <filter>
+		<filter-name>sitemeshFilter</filter-name>
+		<filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>sitemeshFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping> -->
+	
+
+<!-- 	<filter>   -->
+<!--         <filter-name>ParameterFilter</filter-name>   -->
+<!--         <filter-class>com.yitai.educational.interceptor.ParamFilter</filter-class>   -->
+<!--     </filter>   -->
+<!--     <filter-mapping>     -->
+<!--         <filter-name>ParameterFilter</filter-name>     -->
+<!--         <url-pattern>/*</url-pattern>     -->
+<!--     </filter-mapping>   -->
+
+	<servlet>
+		<servlet-name>springServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath*:/META-INF/spring-web/spring-mvc.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<session-config>
+		<session-timeout>20</session-timeout>
+	</session-config>
+	
+	<!--Error_Page_Begin:Range_For_Webapps_Whole_Exception-->
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/views/error/Exception500Page.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/views/error/Exception404Page.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/WEB-INF/views/ExceptionPage.jsp</location>
+	</error-page>
+	<error-page>
+    	<exception-type>java.lang.Exception</exception-type>
+     	<location>/WEB-INF/views/ExceptionPage.jsp</location>
+ 	</error-page>
+	<!--Error_Page_End-->
+	 
+	
+	<mime-mapping>  
+		<extension>manifest</extension>  
+		<mime-type>text/cache-manifest</mime-type>  
+	 </mime-mapping> 
+</web-app>

@@ -1,0 +1,77 @@
+/* 管理员，教育局，学生管理，科目管理，我的班级 */
+.noData{
+  background: url("../../imgs/nodata.png") no-repeat center bottom;
+  padding-top: 100px;
+  height: 233px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.noData .empty-text{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  bottom:-40px;
+  font-size: 14px;
+  color: #b6b6b6;
+}
+.el-table .cell .el-button{
+    font-size: 14px;
+}
+.guide-tips{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+}
+.isMove .move{
+    position: relative;
+    z-index: 100000;
+    cursor: default;
+    pointer-events:none;
+}
+.guide-tips .content{
+    position: relative;
+}
+.guide-tips .guide-tips-bg{
+    position: absolute;
+    
+}
+
+.studentManagement .guide-tips .guide-tips-bg{
+    top: 99px;
+    left: 40px;
+    width: 618px;
+    height: 160px;
+    background: url("../../imgs/stu-mgt-tips.png") no-repeat center bottom;
+}
+
+.admin .guide-tips-bg{
+    position: absolute;
+    z-index: 999999;
+    top: 14px;
+    left: -190px;
+    width: 201px;
+    height: 119px;
+}
+.admin .tabs .guide-tips-bg-edit,
+.admin .tabs .guide-tips-bg-add{
+    display: none;
+}
+.admin .tabs.isMove .guide-tips-bg-edit,
+.admin .tabs.isMove .guide-tips-bg-add{
+    display: block;
+}
+.admin .tabs.isMove .guide-tips-bg-edit{
+    
+    background: url("../../imgs/admin-tips-edit.png") no-repeat center bottom;
+
+}
+.admin .tabs.isMove .guide-tips-bg-add{
+    background: url("../../imgs/admin-tips-add.png") no-repeat center bottom;
+}
+

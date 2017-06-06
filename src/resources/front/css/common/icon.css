@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?4k1fgg');
+  src:  url('fonts/icomoon.eot?4k1fgg#iefix') format('embedded-opentype'),
+  url('fonts/icomoon.ttf?4k1fgg') format('truetype'),
+  url('fonts/icomoon.woff?4k1fgg') format('woff'),
+  url('fonts/icomoon.svg?4k1fgg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-verification-code:before {
+  content: "\e900";
+}
+.icon-account:before {
+  content: "\e901";
+}
+.icon-password:before {
+  content: "\e902";
+}
+.icon-reload:before {
+  content: "\e903";
+}
+.icon-back:before {
+  content: "\e904";
+}
+.icon-required:before {
+  content: "\e905";
+}
+.icon-pull-down:before {
+  content: "\e906";
+}
+.icon-cancel:before {
+  content: "\e907";
+}
+.icon-conserve:before {
+  content: "\e908";
+}
+.icon-new:before {
+  content: "\e909";
+}
+.icon-cue:before {
+  content: "\e90a";
+}
+.icon-delete:before {
+  content: "\e90b";
+}
+.icon-edit:before {
+  content: "\e90c";
+}
+.icon-last-page:before {
+  content: "\e90d";
+}
+.icon-next-page:before {
+  content: "\e90e";
+}
+.icon-choose:before {
+  content: "\e90f";
+}
+.icon-retract:before {
+  content: "\e910";
+}
+.icon-spread:before {
+  content: "\e911";
+}
+.icon-personal:before {
+  content: "\e912";
+}
+.icon-edit2:before {
+  content: "\e913";
+}
+.icon-quit:before {
+  content: "\e914";
+}
+.icon-leading-in:before {
+  content: "\e915";
+}
+.icon-launch:before {
+  content: "\e916";
+}
+.icon-retract2:before {
+  content: "\e917";
+}
+.icon-search:before {
+  content: "\e918";
+}
+.icon-download:before {
+  content: "\e919";
+}
+.icon-leadingin:before {
+  content: "\e91a";
+}
+.icon-success:before {
+  content: "\e91b";
+}
+.icon-fail:before {
+  content: "\e91c";
+}
+.icon-calendar:before {
+  content: "\e91d";
+}
+.icon-grouping:before {
+  content: "\e91e";
+}
+.icon-name:before {
+  content: "\e91f";
+}
+.icon-phone-number:before {
+  content: "\e920";
+}
+.icon-title:before {
+  content: "\e921";
+}
+.icon-history:before {
+  content: "\e922";
+}
+.icon-cancel2:before {
+  content: "\e923";
+}
+.icon-mail_looked:before {
+  content: "\e924";
+}
+.icon-mail:before {
+  content: "\e925";
+}
+
